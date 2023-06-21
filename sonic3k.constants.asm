@@ -244,6 +244,7 @@ Chunk_table			ds.b $8000		; chunk (128x128) definitions, $80 bytes per definitio
 
 Level_layout_header		ds.b 8			; first word = chunks per FG row, second word = chunks per BG row, third word = FG rows, fourth word = BG rows
 Level_layout_main		ds.b $FF8		; $40 word-sized line pointers followed by actual layout data
+SOZSpringVineSlope := Level_layout_header+$F00
 Object_respawn_table_2 :=	Level_layout_header+$400; $200 bytes ; respawn table used by glowing spheres bonus stage, because... Reasons?
 Ring_status_table_2 :=		Level_layout_header+$600; $400 bytes ; ring status table used by glowing spheres bonus stage, because... Reasons?
 Block_table			ds.b $1800		; block (16x16) definitions, 8 bytes per definition, space for $300 blocks
